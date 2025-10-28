@@ -26,25 +26,14 @@
     <h2>Two Way Data Binding</h2>
     <div class="row">
         <div class="col-md-12">
-            <p>1. Interpolation Binding (Typescript to View)</p>
-            This is an - <b>{{name}} {{topic}}</b>
+            <input type="text" [(ngModel)]="random">
+            {{random}}
+
+            <input type="text" [(ngModel)]="topic">
+            {{topic}}
         </div>
-        <div class="col-md-12">
-            <p>2. Property Binding (Typescript to View)</p>
-            This is an - <input type="text" name="" [value]="propBind" />
-            This is my bdjobs Property binding Image: <img [src]="bdjobsImage" alt="Property Binding"/>
-        </div>
-        <div class="col-md-12">
-            <p>3. Event Binding (View to Typescript)</p>
-            <button (click)="OnSave()">Save</button>
-            <select (change)="onChange()">
-                <option value="Country">Country</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
-                <option value="Somalia">Somalia</option>
-            </select>
-        </div>
+
+        <input type="button" value="Bootstrap Woked" class="btn btn-primary" />
 
     </div>
 </div>
