@@ -1,0 +1,31 @@
+
+
+<select name="employee" id="employee">
+    <option [value]="-1">Select......</option>
+    <option [value]="emp.empNum" *ngFor="let emp of employees">
+        {{emp.empName}}---{{emp.empEmail}}
+    </option>
+</select>
+
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>SL</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Email</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of employees; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ emp.empName }}</td>
+      <td>{{ emp.empNum }}</td>
+      <td>{{ emp.empEmail }}</td>
+      <td>{{ emp.empDept }}</td>
+    </tr>
+  </tbody>
+</table>

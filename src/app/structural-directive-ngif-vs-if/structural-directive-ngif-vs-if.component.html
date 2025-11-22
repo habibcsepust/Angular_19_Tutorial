@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-12">
+        <b>Exmaple of *ngIf vs if</b>
+    </div>
+    <div class="col-md-6">
+        <input type="checkbox" name="terms" (click)="toggleCheckbox()"/> I agree to the Terms and Conditions
+    </div>
+    <!-- <div class="col-md-6" *ngIf="isChecked">
+        <button class="btn btn-primary">Button</button>
+    </div> -->
+    @if (isChecked) {
+        <button class="btn btn-primary">Button</button>
+    }
+        
+    
+</div>
+<div class="row m-2">
+    <div class="col-md-12" *ngIf="isVisible">
+        <input type="text" value="Habibur Rahman">
+    </div>
+    <div class="col-md-2 mt-2">
+         <button class="btn btn-primary" (click)="ShowDetails()">Show Details</button>
+    </div>
+     <div class="col-md-10 mt-2">
+        <button class="btn btn-danger" (click)="HideDetails()">Hide Details</button>
+    </div>
+</div>
+
+<div class="row m-2">
+    <div class="col-md-12">
+        <input type="text" [(ngModel)]="input1">
+    </div>
+    <div class="col-md-12">
+        <input type="text" [(ngModel)]="input2">
+    </div>
+    <div *ngIf="input1 !== input2">
+        <h4>Both Values are not equal</h4>
+    </div>
+    <div *ngIf="input1 === input2">
+        <h4>Both Values are equal</h4>
+    </div>
+
+    <!-- @if (input1 !== input2) {
+        <h4>Not Equal</h4>
+    }
+    @else if (input1 === input2) {
+        <h4>Equal</h4>
+    } -->
+</div>
