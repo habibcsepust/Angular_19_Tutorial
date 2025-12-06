@@ -14,4 +14,8 @@ export class StructuralDirectiveNgforVsForComponent {
     {empName: 'Sajid',empNum:102,empEmail:'sajiddcseu@gmail.com',empDept:'IT'},
     {empName: 'Haidar',empNum:103,empEmail:'haidarcsepust@gmail.com',empDept:'HR'},
   ]
+
+  companyList:string[]=['Bdjobs.Com','NextJobz','Pintech', 'NBPLC']
 }
+
+
