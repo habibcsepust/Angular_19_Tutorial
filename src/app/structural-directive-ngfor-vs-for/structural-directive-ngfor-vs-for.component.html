@@ -4,9 +4,15 @@
 
   <select name="employee" id="employee">
       <option [value]="-1">Select......</option>
-      <option [value]="emp.empNum" *ngFor="let emp of employees">
+      <!-- <option [value]="emp.empNum" *ngFor="let emp of employees">
+          {{emp.empName}}---{{emp.empEmail}}
+      </option> -->
+
+      @for (emp of employees; track emp) {
+        <option [value]="emp.empNum">
           {{emp.empName}}---{{emp.empEmail}}
       </option>
+      }
   </select>
 
 
@@ -22,21 +28,36 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let emp of employees; let i = index">
+      <!-- <tr *ngFor="let emp of employees; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ emp.empName }}</td>
         <td>{{ emp.empNum }}</td>
         <td>{{ emp.empEmail }}</td>
         <td>{{ emp.empDept }}</td>
-      </tr>
+      </tr> -->
+
+      @for (emp of employees; track emp) {
+        <tr>
+        <td>{{ emp.empName }}</td>
+        <td>{{ emp.empNum }}</td>
+        <td>{{ emp.empEmail }}</td>
+        <td>{{ emp.empDept }}</td>
+        </tr>
+      }
     </tbody>
   </table>
 
   <div class="container row">
-    <div class="col-md-4"></div>
     <div class="col-md-4">
       <ul *ngFor="let company of companyList">
         {{company}}
       </ul>
+    </div>
+
+    
+    <div class="col-md-8">
+      <button *ngFor="let company of companyList" class="btn btn-primary">
+        {{company}}
+      </button>
     </div>
   </div>
