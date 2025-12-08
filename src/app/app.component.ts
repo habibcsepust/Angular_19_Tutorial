@@ -4,10 +4,12 @@ import { UserComponent } from './user/user.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { StructuralDirectiveNgifVsIfComponent } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if.component';
 import {StructuralDirectiveNgforVsForComponent} from './structural-directive-ngfor-vs-for/structural-directive-ngfor-vs-for.component';
+import { StructuralDirectiveNgswitchVsSwitchComponent } from "./structural-directive-ngswitch-vs-switch/structural-directive-ngswitch-vs-switch.component";
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,UserComponent,DataBindingComponent,StructuralDirectiveNgifVsIfComponent,StructuralDirectiveNgforVsForComponent],
+  imports: [RouterOutlet, UserComponent, DataBindingComponent, StructuralDirectiveNgifVsIfComponent, StructuralDirectiveNgforVsForComponent, StructuralDirectiveNgswitchVsSwitchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

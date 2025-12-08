@@ -49,9 +49,30 @@
 
   <div class="container row">
     <div class="col-md-4">
-      <ul *ngFor="let company of companyList">
+      <!-- <ul *ngFor="let company of companyList">
         {{company}}
-      </ul>
+      </ul> -->
+
+      @for (company of companyList; track company; let f = $first, l=$last, e=$even, o=$odd, c=$count, i=$index;) 
+      {
+        <ul>
+          @if (f==true) {
+            <li style="background-color: green; color: white;">{{company}}</li>
+          }@else if (l==true) {
+            <li style="background-color: red; color: black;">{{company}}</li>
+          }@else {
+            <li style="background-color: aquamarine; color: black;">{{company}}</li>
+          }
+        </ul>
+
+        @if (l==true) {
+          Total: {{c}}
+        }
+      }
+      @empty {
+        No Company Found
+      }
+       
     </div>
 
     
